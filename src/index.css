@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --color-paper: #faf9f6;
+  --color-paper-dim: #f0eee8;
+  --color-ink: #1f1c18;
+  --color-ink-soft: #57534a;
+  --color-line: #e4e0d6;
+  --color-accent: #a8522f;
+  --color-accent-dark: #8a4326;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Lecteur audio natif : rendu discret et cohérent avec le reste de l'interface */
+audio {
+  width: 100%;
+  accent-color: var(--color-accent);
+}
